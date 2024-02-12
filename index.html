@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priyansh's Portfolio | Home</title>
+    <link rel="icon" type="image/x-icon" href="images/portfolio.png" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/banner.css" />
+    <link rel="stylesheet" href="css/aboutandfooter.css" />
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/skill-section.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+  </head>
+
+  <style>
+    :root {
+      --color-1: #5CEBDF;
+      --color-2: #545454;
+      --color-3: #78350F;
+      --color-4: #FBBF24;
+      --card-color1: rgb(0, 209, 0);
+
+      --card-color2: rgb(209, 209, 0);
+      --card-color3: rgb(0, 209, 129);
+      --card-color4: rgb(0, 96, 185);
+      --card-color5: rgb(209, 209, 0);
+      --card-color6: rgb(0, 209, 0);
+      --card-color7: rgb(0, 96, 185);
+      --card-color8: rgb(0, 209, 129);
+    }
+    * {
+      /* background-color: lightblue; */
+      margin: 0;
+      padding: 0;
+    }
+    
+  </style>
+  <body>
+    <!-- Navbar -->
+
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="logo">
+            <img src="images/WaRRior.png" alt="" id="mylogoimg" />
+          </div>
+          <button type="button" class="nav-toggler">
+            <span></span>
+          </button>
+          <nav class="nav">
+            <ul>
+              <li><a href="index.html" class="nav-btn active">Home</a></li>
+              <li><a href="skills.html" class="nav-btn">Skills</a></li>
+              <li><a href="projects.html" class="nav-btn">Projects</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <div class="mysocialhandles reveal-left">  
+      <a href="https://www.linkedin.com/in/priyanshseth"
+        ><img src="images/linkedin.png" alt="LinkedIn"
+      /></a>
+      <a href="https://github.com/INSANEWARRIORR"
+        ><img src="images/github.png" alt="GitHub"
+      /></a>
+      <a href="https://x.com/impriyanshseth"
+        ><img src="images/x.png" alt="Twitter"
+      /></a>
+      <a href="https://www.instagram.com/priyansh.seth_/"
+        ><img src="images/instagram.png" alt="Instgram"
+      /></a>
+    </div>
+    <div class="my-banner">
+      <div class="my-banner-left reveal-down">
+        <p class="head1">Hello Friends ,it's me</p>
+        <p class="head2">Priyansh Seth.</p>
+        <p class="head3">
+          I am a MERN Developer , a programmer and a Manual Tester.
+        </p>
+      </div>
+      <div class="my-banner-right reveal-left">
+        <div class="empty-div"></div>
+        <img src="images/Priyansh.png" alt="" />
+      </div>
+    </div> 
+
+    <!-- Who am I -->
+    <div class="about-me reveal-up" id="aboutme">
+      <p class="head1 reveal-left">About Me</p>
+      <p class="head2 reveal-right">
+        I'm Priyansh Seth recent graduate with a solid background in programming through 
+        my study and practical experience . I've honed my skills in C++, DATA STRUCTURE 
+        AND ALGORITHMS, C#, HTML, CSS, JAVASCRIPT, NODE.JS, EXPRESS.JS, GIT & GITUB. </br>
+        I have a strong interest in software development and eager to put my knowledge to 
+        use and learn new technologies to develop creative solutions that address pressing 
+        issues in the real world .
+      </p>
+    </div>
+
+    
+    <footer>
+      <div class="head1">For more details</div>
+      <div class="head2 reveal-down">
+        <nav class="nav2">
+          <ul>
+            <li><a href="/home" class="nav-btn active">Home</a></li>
+              <li><a href="skills.html" class="nav-btn">Skills</a></li>
+              <li><a href="projects.html" class="nav-btn">Projects</a></li>
+              <!-- <li><a href="#" class="nav-btn">Contact</a></li> -->
+          </ul>
+        </nav>
+        <div class="credit"> Created By WaRRioR</a> | All Rights Reserved ©</div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="js/randomcolor.js"></script>
+  <script src="js/navbar.js"></script>
+  <script>
+    function revealup() {
+      var reveals = document.querySelectorAll(".reveal-up");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    function revealdown() {
+      var reveals = document.querySelectorAll(".reveal-down");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+    function revealleft() {
+      var reveals = document.querySelectorAll(".reveal-left");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    function revealright() {
+      var reveals = document.querySelectorAll(".reveal-right");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", revealup);
+    window.addEventListener("scroll", revealdown);
+    window.addEventListener("scroll", revealleft);
+    window.addEventListener("scroll", revealright);
+
+    window.onload = revealup();
+    window.onload = revealdown();
+    window.onload = revealleft();
+    window.onload = revealright();
+  </script>
+</html>
