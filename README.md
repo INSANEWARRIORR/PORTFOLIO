@@ -1,5 +1,5 @@
 # Step 1:
-# First install npm init using terminal 
+# For installation of dependencies install using npm init using terminal 
 # Step 2:
 # Then for modules do npm init -y using terminal 
 # Step 3:
